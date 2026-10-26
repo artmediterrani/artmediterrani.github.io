@@ -9,3 +9,5 @@
 header > .wordmark{position:relative;flex-shrink:0;margin-right:26px}
 header > .wordmark::after{content:"";position:absolute;top:1px;right:-28px;width:22px;height:22px;border-radius:50%;background:radial-gradient(circle at 38% 32%,#ffd56d 0%,#ffc44a 48%,#f7b52d 100%);pointer-events:none}
 @media(max-width:650px){header > .wordmark{margin-right:22px}header > .wordmark::after{width:18px;height:18px;right:-23px;top:0}}
+/* Menu category explanations */
+.menu-category-description{font-size:14px;line-height:1.65;color:var(--muted);max-width:850px;margin:14px 0 20px}@media(max-width:650px){.menu-category-description{font-size:13px;margin:12px 0 18px}}
