@@ -1,4 +1,20 @@
 'use strict';
+const viewer = document.querySelector('.gallery-viewer');
+if (viewer && typeof viewer.showModal === 'function') {
+  const closeViewer = () => viewer.close();
+  document.querySelectorAll('.gallery-photo').forEach(link => {
+    link.addEventListener('click', event => {
+      if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+      event.preventDefault();
+      viewer.querySelector('img').src = link.href;
+      viewer.querySelector('img').alt = link.querySelector('img').alt;
+      viewer.querySelector('figcaption').textContent = link.closest('figure').querySelector('figcaption').textContent;
+      viewer.showModal();
+    });
+  });
+  viewer.querySelector('button').addEventListener('click', closeViewer);
+  viewer.addEventListener('click', event => { if (event.target === viewer) closeViewer(); });
+}
 const form = document.querySelector('#quote-form');
 if (form) {
   const t = JSON.parse(document.querySelector('#translations').textContent);
