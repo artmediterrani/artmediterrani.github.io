@@ -102,3 +102,5 @@ body:not(.home) .callout-fine{color:var(--ink-soft)}
 .inner-page footer{margin-top:90px;border:0;padding-top:42px}
 .page-wave-divider{position:relative;isolation:isolate;height:45px;background:var(--sea-wash);margin-top:75px}
 @media(max-width:760px){.inner-page .page-head{padding:40px 6% 42px;margin-bottom:50px}.inner-page .page-head h1{font-size:clamp(38px,6.5vw,48px)}.inner-page .page-head>p:last-of-type{font-size:16px}.page-head-wave{height:33px;bottom:-32px}.inner-page .menu-category-heading{padding:18px;gap:12px}.inner-page .menu-category-heading h3{font-size:25px}.inner-page .menu-category-description{padding-left:0}.inner-page .gallery-heading h2{padding:15px 18px}.inner-page .review-panel>h2{padding:18px}.inner-page .callout{margin-top:65px;padding:26px 6%;gap:25px}.inner-page footer{margin-top:65px;padding-top:30px}.page-wave-divider{margin-top:60px;height:30px}}
+/* Keep the complete logo signature on a single line. */
+.home .footer-signature .brand-art figcaption{white-space:nowrap;font-size:clamp(7px,.65vw,8px);letter-spacing:.08em}
