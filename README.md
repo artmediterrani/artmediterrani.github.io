@@ -21,3 +21,7 @@ Back up the existing repository, then upload the CONTENTS of this folder to its 
 
 ## Preview
 Serve this directory with any static HTTP server. Open index.html. The site also supports direct file navigation; automatic clipboard copying may require HTTPS or localhost.
+
+
+## Reviews
+The reviews page accepts a rating from 1 to 5 paellas, a displayed name and a comment, with explicit permission to publish. It prepares a WhatsApp message for the visitor to send to the existing business number. It does not submit, store or publish a review automatically. No sample or invented reviews are displayed. Publish only real reviews selected by the owner with the reviewer's permission; show the original comment, displayed name and 1–5 paella rating in the published-reviews section of each language page. The WhatsApp QR is no longer displayed on Contact; the direct link remains.
