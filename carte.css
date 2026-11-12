@@ -1,0 +1,194 @@
+/* 1. Menu-specific layout; shared site navigation keeps its existing appearance. */
+.seasonal-carte {
+  max-width: 1100px;
+  padding: 0 32px 70px;
+}
+.seasonal-carte h1 {
+  font-size: clamp(38px, 5vw, 64px);
+}
+.seasonal-carte h2 {
+  font-size: clamp(30px, 3.4vw, 43px);
+}
+.seasonal-carte h3 {
+  font-family: Georgia, serif;
+  font-size: 25px;
+}
+.carte-hero {
+  padding: 65px 0 40px;
+  border-bottom: 2px solid #e8dfc8;
+}
+.carte-hero > p:not(.carte-price) {
+  max-width: 740px;
+}
+.carte-eyebrow {
+  color: #806016;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.carte-price {
+  display: inline-block;
+  background: #f6c848;
+  border-radius: 6px;
+  padding: 11px 17px;
+  font-weight: bold;
+  margin: 0 0 16px;
+}
+.carte-fine {
+  color: var(--muted);
+  font-size: 14px;
+}
+.carte-section {
+  padding: 43px 0;
+  border-bottom: 1px solid #e7ddc8;
+}
+.carte-intro {
+  color: var(--muted);
+  max-width: 730px;
+}
+
+/* 2. Dishes and prices remain readable with long translations. */
+.carte-dishes {
+  list-style: none;
+  padding: 0;
+  margin: 22px 0 0;
+}
+.carte-dishes li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 24px;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee6d7;
+}
+.carte-dishes li > span {
+  min-width: 0;
+}
+.carte-dishes strong {
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+@media (min-width: 850px) {
+  .carte-dish-group > .carte-dishes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 36px;
+  }
+}
+
+/* 3. Accessible seasonal tabs; hidden panels use the native hidden attribute. */
+.carte-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 25px 0;
+}
+.carte-tabs[hidden],
+.carte-season[hidden] {
+  display: none;
+}
+.carte-tabs button {
+  border: 1px solid #9baeba;
+  border-radius: 30px;
+  background: white;
+  color: var(--navy);
+  padding: 11px 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.carte-tabs button[aria-selected="true"] {
+  background: var(--navy);
+  color: white;
+}
+.carte-season {
+  margin-top: 25px;
+}
+.carte-dish-group + .carte-dish-group {
+  margin-top: 1.5rem;
+}
+.carte-dish-group h3,
+.carte-season h3 {
+  line-height: 1.35;
+}
+
+/* 4. Bespoke recipes and detailed workshop offer. */
+.carte-custom {
+  background: #eaf2f3;
+  padding: 32px;
+  border-radius: 12px;
+}
+.carte-custom p:last-child {
+  margin-bottom: 0;
+}
+.carte-price-note {
+  margin: 24px 0 0;
+}
+.carte-workshop {
+  margin: 54px 0 0;
+  padding: 36px 32px;
+  border-radius: 18px;
+  background: #fff6dc;
+  box-shadow: 0 7px 28px #082d5012;
+}
+.carte-workshop h3 {
+  margin: 28px 0 14px;
+}
+.carte-workshop-lead {
+  font-size: 19px;
+  font-weight: bold;
+}
+.carte-facts {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 24px 0;
+}
+.carte-facts li {
+  border: 1px solid #d9ba5a;
+  background: #fffdf7;
+  border-radius: 30px;
+  padding: 8px 13px;
+  font-size: 14px;
+}
+.carte-facts li:nth-child(-n + 2) {
+  font-weight: bold;
+}
+.carte-inclusions {
+  padding-left: 22px;
+}
+.carte-inclusions li {
+  margin-bottom: 14px;
+}
+.carte-closing {
+  font-style: italic;
+  border-top: 1px solid #d9ba5a;
+  padding-top: 18px;
+  margin-top: 22px;
+}
+
+/* 5. Compact spacing for small screens, retaining room for prices and controls. */
+@media (max-width: 650px) {
+  .seasonal-carte {
+    padding: 0 6% 45px;
+  }
+  .carte-hero {
+    padding-top: 40px;
+  }
+  .carte-dishes li {
+    gap: 14px;
+    font-size: 14px;
+  }
+  .carte-custom,
+  .carte-workshop {
+    padding: 24px 20px;
+  }
+  .carte-workshop {
+    margin-top: 30px;
+  }
+  .carte-tabs button {
+    padding: 10px 14px;
+  }
+}
