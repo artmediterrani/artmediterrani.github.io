@@ -1,0 +1,3 @@
+# Allow crawlers to read the noindex directive on draft pages.
+User-agent: *
+Allow: /
